@@ -1,0 +1,109 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Event;
+use Illuminate\Database\Seeder;
+
+class EventSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $events = [
+            [
+                'title' => 'Torneo de Fútbol Plaza Huincul',
+                'description' => 'Encuentro deportivo con equipos locales.',
+                'category' => 'Fútbol',
+                'date' => '2026-11-21',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/cancha_futbol.jpg',
+                'price' => 55000,
+            ],
+            [
+                'title' => 'Torneo Infantil de Fútbol',
+                'description' => 'Encuentro de fútbol para categorías iniciales.',
+                'category' => 'Fútbol',
+                'date' => '2026-12-05',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/futbol-infantil.jpg',
+                'price' => 0,
+            ],
+            [
+                'title' => 'Clínica de Básquet para categorías iniciales',
+                'description' => 'Clínica de entrenamiento dictada por el ex-campeón olímpico Walter Hermann.',
+                'category' => 'Básquet',
+                'date' => '2026-11-15',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/clinica-Herman2.jpg',
+                'price' => 20000,
+            ],
+            [
+                'title' => 'Encuentro de Básquet Juvenil',
+                'description' => 'Jornada deportiva para jóvenes jugadores.',
+                'category' => 'Básquet',
+                'date' => '2027-01-10',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/basquet2.jpg',
+                'price' => 10000,
+            ],
+            [
+                'title' => 'Torneo de Vóley',
+                'description' => 'Encuentro de vóley con equipos de diferentes localidades.',
+                'category' => 'Vóley',
+                'date' => '2026-12-13',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/Voley-femenino.jpeg',
+                'price' => 0,
+            ],
+            [
+                'title' => 'Copa Provincial de Vóley',
+                'description' => 'Competencia provincial de vóley.',
+                'category' => 'Vóley',
+                'date' => '2026-11-08',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/cancha_basket.jpg',
+                'price' => 0,
+            ],
+            [
+                'title' => 'Competencia de Natación',
+                'description' => 'Jornada de natación para diferentes categorías.',
+                'category' => 'Natación',
+                'date' => '2026-12-12',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/pileta2.jpg',
+                'price' => 25000,
+            ],
+            [
+                'title' => 'Torneo Regional de Pádel',
+                'description' => 'Competencia de pádel en parejas.',
+                'category' => 'Pádel',
+                'date' => '2027-01-24',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/padel-fem.jpg',
+                'price' => 45000,
+            ],
+            [
+                'title' => 'Encuentro de Pádel',
+                'description' => 'Jornada recreativa y deportiva de pádel.',
+                'category' => 'Pádel',
+                'date' => '2027-02-07',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/complejo-deportivo2.jpg',
+                'price' => 30000,
+            ],
+            [
+                'title' => 'Exhibición de Boxeo',
+                'description' => 'Encuentro de boxeo con exhibiciones deportivas.',
+                'category' => 'Boxeo',
+                'date' => '2027-07-18',
+                'location' => 'Plaza Huincul, Neuquén',
+                'image' => '/images/ring-box.jpg',
+                'price' => 20000,
+            ],
+        ];
+
+        foreach ($events as $event) {
+            Event::create($event);
+        }
+    }
+}
