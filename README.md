@@ -35,9 +35,25 @@ Proyecto integrador de **Programación Web Avanzada** (UNCo). En el TP3 se const
 - Node.js y npm
 - XAMPP (solo MySQL)
 
+## Instalación y ejecución
+
+```bash
+git clone https://github.com/GABRIEL3503/eventos-app-club-plaza.git
+cd eventos-app-club-plaza
 
 
-https://github.com/GABRIEL3503/eventos-app-club-plaza.git
+composer install
+npm install
+
+cp .env.example .env
+php artisan key:generate
+```
+
+Crear en phpMyAdmin una base de datos llamada `eventos_db` y luego:
+
+```bash
+php artisan migrate
+php artisan db:seed --class=EventSeeder
 ```
 
 Levantar el proyecto en **dos terminales**:
